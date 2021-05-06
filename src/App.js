@@ -1,24 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import { AccountBox } from "./components/accountBox";
+import styled from "styled-components";
+//import "./App.css";
+
+const AppContainer = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainer>
+      <AccountBox />
+    </AppContainer>
+
+    // <div className="app">
+    //   <Router>
+    //     <Switch>
+    //       <Route exact path="/login" component={Login} />
+    //       <Route exact path="/menu" component={Menu} />
+    //       <Route exact path="/orders" component={Orders} />
+    //       <Route path="/*" component={Home} />
+    //     </Switch>
+    //   </Router>
+    // </div>
   );
 }
 
